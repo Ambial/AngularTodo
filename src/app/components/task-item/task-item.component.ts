@@ -3,8 +3,8 @@ import { Task } from "../../Task";
 
 @Component({
   selector: 'app-task',
-  templateUrl: './task.component.html',
-  styleUrls: ['./task.component.scss']
+  templateUrl: './task-item.component.html',
+  styleUrls: ['./task-item.component.scss']
 })
 export class TaskComponent implements OnInit {
 
