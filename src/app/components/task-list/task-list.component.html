@@ -1,3 +1,1 @@
-<div *ngFor="let task of listOfTasks">
-    {{ task.id }}
-</div>
+<app-task *ngFor="let todo of listOfTasks" [task]="todo"></app-task>
