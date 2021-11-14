@@ -9,6 +9,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { ButtonComponent } from './components/button/button.component';
 import { TaskListComponent } from './components/task-list/task-list.component';
 import { TaskComponent } from './components/task-item/task-item.component';
+import { AddTaskComponent } from './components/add-task/add-task.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { TaskComponent } from './components/task-item/task-item.component';
     HeaderComponent,
     ButtonComponent,
     TaskListComponent,
-    TaskComponent
+    TaskComponent,
+    AddTaskComponent
   ],
   imports: [
     BrowserModule,
