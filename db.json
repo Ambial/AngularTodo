@@ -23,6 +23,11 @@
       "text": "Study",
       "day": "November 14th at 5:30pm",
       "reminder": true
+    },
+    {
+      "text": "Ich war Zuhause und bin verärgert",
+      "day": "April 1st 6:00am",
+      "id": 9934
     }
   ]
 }
