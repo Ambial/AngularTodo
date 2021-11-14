@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Task } from "../../Task";
 import { TaskService } from "../../services/task.service";
+import { UiService } from "src/app/services/ui.service";
+import { Subscription } from "rxjs";
 @Component({
   selector: 'app-task-list',
   templateUrl: './task-list.component.html',
@@ -9,10 +11,18 @@ import { TaskService } from "../../services/task.service";
 export class TaskListComponent implements OnInit {
 
   listOfTasks: Task[] = [];
+  showAddTask:boolean = true;
+  subscription:Subscription;
 
   // ts shorthand to create and assign class properties from constructor params
   // https://www.typescriptlang.org/docs/handbook/2/classes.html#parameter-properties
-  constructor(private taskService: TaskService) { }
+  constructor(
+    private taskService: TaskService, 
+    private uiService:UiService) { 
+      this.subscription = this.uiService
+        .onToggle()
+        .subscribe(val => this.showAddTask = val)
+  }
 
   ngOnInit(): void {
    this.taskService.getTasks().subscribe((tasks) => (this.listOfTasks = tasks));
