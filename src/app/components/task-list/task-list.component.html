@@ -1,5 +1,6 @@
 <app-task 
     *ngFor="let todo of listOfTasks" 
     [task]="todo"
-    (deleteRequest)="deleteTask(todo)">
+    (deleteRequest)="deleteTask(todo)"
+    (updateReminderRequest)="updateReminder(todo)">
 </app-task>

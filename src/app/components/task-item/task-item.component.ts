@@ -11,6 +11,7 @@ export class TaskComponent implements OnInit {
 
   @Input() task: Task;
   @Output() deleteRequest = new EventEmitter<Task>();
+  @Output() updateReminderRequest = new EventEmitter<Task>();
   
   faTimes = faTimes;
 
@@ -21,6 +22,11 @@ export class TaskComponent implements OnInit {
 
   onDelete(task:Task) {
     this.deleteRequest.emit(this.task);
+  }
+
+  onToggle(){
+    this.task.reminder = !this.task.reminder;
+    this.updateReminderRequest.emit(this.task);
   }
 
 }

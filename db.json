@@ -22,7 +22,7 @@
       "id": 4,
       "text": "Study",
       "day": "November 14th at 5:30pm",
-      "reminder": false
+      "reminder": true
     }
   ]
 }
