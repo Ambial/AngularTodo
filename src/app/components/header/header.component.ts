@@ -11,7 +11,7 @@ import { Router } from "@angular/router";
 export class HeaderComponent implements OnInit {
 
   title:string = 'Angular Task Tracker';
-  showAddTask:boolean = true;
+  showAddTask:boolean;
   subscription:Subscription;
 
   constructor(
@@ -30,7 +30,6 @@ export class HeaderComponent implements OnInit {
   }
 
   isOnHomePage():boolean {
-    console.log(this.router.url)
     return this.router.url === "/";
   }
 

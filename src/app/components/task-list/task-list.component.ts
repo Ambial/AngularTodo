@@ -11,7 +11,7 @@ import { Subscription } from "rxjs";
 export class TaskListComponent implements OnInit {
 
   listOfTasks: Task[] = [];
-  showAddTask:boolean = true;
+  showAddTask:boolean;
   subscription:Subscription;
 
   // ts shorthand to create and assign class properties from constructor params
