@@ -1,1 +1,5 @@
-<app-task *ngFor="let todo of listOfTasks" [task]="todo"></app-task>
+<app-task 
+    *ngFor="let todo of listOfTasks" 
+    [task]="todo"
+    (deleteRequest)="deleteTask(todo)">
+</app-task>
